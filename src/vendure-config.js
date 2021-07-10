@@ -32,17 +32,30 @@ const config = {
             password: 'superadmin',
         },
     },
+    ///online
     dbConnectionOptions: {
         type: 'mysql',
         synchronize: true, // turn this off for production
         logging: false,
-        database: 'demo_shop',
-        host: 'localhost',
+        database: 'demo-shop-database',
+        host: 'srv-captain--xtqsjomduc',
         port: 3306,
-        username: 'root',
-        password: '',
+        username: 'demo-shop-user',
+        password: 'eg7U0dD9ItLj',
         migrations: [path.join(__dirname, '../migrations/*.ts')],
     },
+    ///local
+    // dbConnectionOptions: {
+    //     type: 'mysql',
+    //     synchronize: true, // turn this off for production
+    //     logging: false,
+    //     database: 'demo_shop',
+    //     host: 'localhost',
+    //     port: 3306,
+    //     username: 'root',
+    //     password: '',
+    //     migrations: [path.join(__dirname, '../migrations/*.ts')],
+    // },
     paymentOptions: {
         paymentMethodHandlers: [dummyPaymentHandler],
     },
